@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 	public float moveSpeed;
-	public float jumpHeight;
-	private Rigidbody rigidBody;
-
 	void Start () {
-		moveSpeed = 3f;
-		rigidBody = GetComponent<Rigidbody>();
-	}
-	void FixedUpdate() {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			rigidBody.velocity = new Vector3(0, 10 * jumpHeight * Time.deltaTime, 0);
-		}	
+		moveSpeed = 0.1f;
 	}
 	void Update () {
 		transform.Translate(
